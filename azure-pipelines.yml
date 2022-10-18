@@ -16,4 +16,4 @@ steps:
      dockerfile: $(dockerfile)
      repository: $(imageName)
      containerRegistry: $(containerRegistry)
-     tags: $(Build.BuildId)_$(date:yyyyMMdd)$(rev:.r)
+     tags: $(Build.BuildId)
