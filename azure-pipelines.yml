@@ -8,13 +8,12 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
 steps:
-  - task: Docker@2
-      displayName: Build and push an image to container registry
-      inputs:
-        command: buildAndPush
-        repository: $(repository)
-        dockerfile: $(dockerfile)
-        containerRegistry: $(containerRegistry)
-        tags: $(Build.BuildId)_$(date:yyyyMMdd)$(rev:.r)
+ - task: Docker@2
+   displayName: Build an image
+   inputs:
+     command: buildAndPush
+     dockerfile: $(dockerfile)
+     repository: $(imageName)
+     containerRegistry: $(containerRegistry)
+     tags: $(Build.BuildId)_$(date:yyyyMMdd)$(rev:.r)
