@@ -4,5 +4,5 @@ import "fmt"
 
 func main() {
 	fmt.Println("demo blog api")
-	fmt.Println("check ci blog api")
+	fmt.Println("check ci blog api 2")
 }
